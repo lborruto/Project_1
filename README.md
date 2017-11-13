@@ -1,8 +1,8 @@
 # Projet fondamentaux scientifiques
 ### Membres :
 * Luca BORRUTO
-* Antoine Bizzari
-* Tristan Boulesteix
+* Antoine BIZZARI
+* Tristan BOULESTEIX
 
 ---
 Le but de ce projet est de créer un lecteur portatif grand public de fréquence cardiaque.
