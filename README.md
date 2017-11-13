@@ -7,7 +7,7 @@
 ---
 Le but de ce projet est de créer un lecteur portatif grand public de fréquence cardiaque.
 
-Afin de facilité sa réalisation le projet est divisé en quatre modules
+Afin de faciliter sa réalisation le projet est divisé en quatre modules
 
 ---
 ### Module 1 : Cardio
