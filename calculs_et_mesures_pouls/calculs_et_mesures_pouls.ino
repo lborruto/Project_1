@@ -3,7 +3,7 @@ int temps = 0; //Initialisation du temps
 
 void setup() {
   // put your setup code here, to run once:
-  digitalWrite(ledInfrarouge, high);//Met la LED infrarouge à l'état haut (allumage de la LED)
+  digitalWrite(ledInfrarouge, HIGH);//Met la LED infrarouge à l'état haut (allumage de la LED)
 }
 
 void loop() {
