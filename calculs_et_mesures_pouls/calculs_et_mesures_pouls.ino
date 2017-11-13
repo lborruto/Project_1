@@ -1,4 +1,4 @@
-#include "cardio.c"
+#include "cardio.h"
 
 const int ledInfrarouge = 8; //Numéro de la broche qui contrôle la LED infrarouge
 unsigned long temps = 0; //Initialisation du temps
