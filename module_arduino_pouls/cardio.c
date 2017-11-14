@@ -1,11 +1,11 @@
 #include "cardio.h"
 
-int valeurPouls(int lecture, long temps){
+int valeurPouls(int lecture, unsigned long temps){
 	//enregistre dans un tableau les valeurs du pouls prise régulièrement
 	int valeurPrecedente = 0; //Initialisation de la retenue
 	int seuilLimite = 650;
 	long tempsPrecedent = 0; //Initialisation du temps
-	int pouls = ""; //valeur du pouls à renvoyer
+	int pouls; //valeur du pouls à renvoyer
 	
   if (lecture > seuilLimite) {
     if (valeurPrecedente <= seuilLimite){
