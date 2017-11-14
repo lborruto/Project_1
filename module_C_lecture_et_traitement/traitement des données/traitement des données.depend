@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1510676171 source:c:\users\tboul\onedrive - association cesi viacesi mail\ue 1\projet\github\project_1\module_c_lecture_et_traitement\traitement des données\main.c
+	<stdio.h>
+	<stdlib.h>
+	"actions.h"
+	"donnees.h"
+	"menu.h"
+
+1510676089 c:\users\tboul\onedrive - association cesi viacesi mail\ue 1\projet\github\project_1\module_c_lecture_et_traitement\traitement des données\actions.h
+
+1510676025 c:\users\tboul\onedrive - association cesi viacesi mail\ue 1\projet\github\project_1\module_c_lecture_et_traitement\traitement des données\donnees.h
+
+1510675904 c:\users\tboul\onedrive - association cesi viacesi mail\ue 1\projet\github\project_1\module_c_lecture_et_traitement\traitement des données\menu.h
+
