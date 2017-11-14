@@ -9,6 +9,6 @@ int valeurPouls(int lecture, unsigned long temps);
  * calcule le pouls en fonction du nombre de battements
  */
 
- #ifdef __cplusplus
-extern "C" {
+#ifdef __cplusplus
+} // extern "C"
 #endif
