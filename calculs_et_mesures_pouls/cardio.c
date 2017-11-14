@@ -5,7 +5,7 @@ int valeurPouls(int lecture, int temps){
 	int valeurPrecedente = 0; //Initialisation de la retenue
 	int seuilLimite = 650;
 	long tempsPrecedent = 0; //Initialisation du temps
-	int pouls = //valeur du pouls à renvoyer
+	int pouls = ""; //valeur du pouls à renvoyer
 	
   if (lecture > seuilLimite) {
     if (valeurPrecedente <= seuilLimite){
