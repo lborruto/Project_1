@@ -7,6 +7,7 @@ const int photo = 0; //Numéro de la broche qui reçoit les informations du phot
 unsigned long temps = 0; //Initialisation du temps à 0
 unsigned long temps1 = 0;
 int lecture; //Pour afficher le résultat
+tempsPrecedent = 0;
 
 
 void setup() {

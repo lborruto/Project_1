@@ -4,7 +4,6 @@ int valeurPouls(int lecture, unsigned long temps){
 	//enregistre dans un tableau les valeurs du pouls prise régulièrement
 	int valeurPrecedente = 0; //Initialisation de la retenue
 	int seuilLimite = 650;
-	long tempsPrecedent = 0; //Initialisation du temps
   unsigned long time1;
 	int pouls; //valeur du pouls à renvoyer
 	
