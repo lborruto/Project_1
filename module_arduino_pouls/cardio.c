@@ -5,16 +5,17 @@ int valeurPouls(int lecture, unsigned long temps){
 	int valeurPrecedente = 0; //Initialisation de la retenue
 	int seuilLimite = 650;
 	long tempsPrecedent = 0; //Initialisation du temps
+  unsigned long time1;
 	int pouls; //valeur du pouls à renvoyer
 	
   if (lecture > seuilLimite) {
     if (valeurPrecedente <= seuilLimite){
-      temps = millis();
+      time1 = temps;
       if (temps > (tempsPrecedent + 200)){
         pouls = (1000.0 * 60.0) / (temps - tempsPrecedent);
         tempsPrecedent = temps; //On met à jour le temps
       }
     }
   }
-
+  return pouls;
 }
