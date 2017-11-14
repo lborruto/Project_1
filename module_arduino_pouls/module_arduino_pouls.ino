@@ -14,7 +14,6 @@ void setup() {
 
 void loop() {
   int pouls;
-  void valeurPouls();
   // put your main code here, to run repeatedly:
   lecture = analogRead(0); //Lecture de l'état du phototransistor dans la variable "lecture"
   temps = millis(); //Enregistrement dans "temps" de la durée d'exécution du programme en millisecondes
