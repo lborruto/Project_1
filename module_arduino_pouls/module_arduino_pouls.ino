@@ -28,5 +28,5 @@ void loop() {
   Serial.println(pouls); //Affichage des résultats sur le port série
   Serial.println(millis());
   Serial.println('\n');
-  delay(200); //Fait une pause pour ne pas surcharger le programme
+  delay(200);
 }
