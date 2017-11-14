@@ -4,9 +4,7 @@
 extern "C" {
 #endif
 
-tempsPrecedent = 0;
-
-int valeurPouls(int lecture, unsigned long temps);
+int valeurPouls(int lecture, unsigned long temps, unsigned long tempsPrecedent);
 /*fonction calculPouls
  * calcule le pouls en fonction du nombre de battements
  */
