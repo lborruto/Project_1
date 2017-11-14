@@ -1,6 +1,6 @@
 #include "cardio.h"
 
-const int ledInfrarouge = 8; //Numéro de la broche qui contrôle la LED infrarouge
+// const int ledInfrarouge = 8; //Numéro de la broche qui contrôle la LED infrarouge
 const int photo = 0; //Numéro de la broche qui reçoit les informations du phototransistor
 unsigned long temps = 0; //Initialisation du temps à 0
 int lecture; //Pour afficher le résultat
@@ -8,8 +8,8 @@ int lecture; //Pour afficher le résultat
 
 void setup() {
   // put your setup code here, to run once:
-  pinMode(ledInfrarouge, OUTPUT);
-  digitalWrite(ledInfrarouge, HIGH); //Met la LED infrarouge à l'état haut (allumage de la LED) 
+  // pinMode(ledInfrarouge, OUTPUT);
+  // digitalWrite(ledInfrarouge, HIGH); //Met la LED infrarouge à l'état haut (allumage de la LED) 
  }
 
 void loop() {
