@@ -1,4 +1,6 @@
+// extern "C" {
 #include "cardio.h"
+// }
 
 // const int ledInfrarouge = 8; //Numéro de la broche qui contrôle la LED infrarouge
 const int photo = 0; //Numéro de la broche qui reçoit les informations du phototransistor
