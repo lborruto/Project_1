@@ -32,23 +32,23 @@ void loop()
   for (i=0; i<10; i++)
   {
     digitalWrite (pinLed[i], HIGH);
-    delay(250);
   }
+  delay(250);
   for (k=0; k<10; k++)
   {
     digitalWrite (pinLed[k], LOW);
-    delay(500);
   }
+  delay(500);
   for (l=0; l<10; l++)
   {
     digitalWrite (pinLed[l], HIGH);
-    delay(250);
   }
+  delay(250);
   for (m=0; m<10; m++)
   {
     digitalWrite (pinLed[m], LOW);
-    delay(2000);
   }
+  delay(2000);
  }
  
 }
