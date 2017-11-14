@@ -2,7 +2,7 @@
 
 const int ledInfrarouge = 8; //Numéro de la broche qui contrôle la LED infrarouge
 const int photo = 0; //Numéro de la broche qui reçoit les informations du phototransistor
-unsigned long temps = 0; //Initialisation du temps à 0
+long temps = 0; //Initialisation du temps à 0
 int lecture; //Pour afficher le résultat
 
 
