@@ -31,9 +31,21 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="actions.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="actions.h" />
+		<Unit filename="donnees.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="donnees.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="menu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="menu.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
