@@ -5,8 +5,6 @@
 #include "donnees.h"
 #include "menu.h"
 
-//#include "donnees.csv"//Je ne pense pas que ça soit nécessaire...
-
 int main(int argc, char *argv[])
 {
 	int traitement;
