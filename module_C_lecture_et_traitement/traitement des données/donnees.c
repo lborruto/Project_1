@@ -1,23 +1,22 @@
 #include "donnees.h"
 
-void lectureFile()
+void lectureFile(char** retourChaine)
 {
 	FILE* csv = NULL;
 	char str[TAILLE]; //Pour enregistrer une chaîne de charactère
-	int i;
-	char **retourChaine[i]; //Pointeurs vers des chaînes de charactères
+	int i = 0;
 
 
 	csv = fopen("pouls.csv", "r");
 
 
-    if (csv == NULL)
+    if (csv == NULL) //Verification de l'ouverture du fichier
     {
         printf("Impossible d'ouvrir le fichier test.txt");
         exit(1);
     }
 
-	while (fgets(str, TAILLE, csv))
+	while (fgets(str, TAILLE, csv) != NULL)
 	{
 		retourChaine[i]=malloc(sizeof(char)*(strlen(str)));
 

@@ -8,7 +8,7 @@ int menu()
 	printf("Selectionnez une option :\n");
 	printf("1- Afficher les donnees telle qu'elle etait dans le fichier .csv.\n2- Afficher les donnees en ordre croissant / décroissant.\n3- Afficher des donnees pour un temps donnes.\n");
 	printf("4- Afficher le nombre de lignes enregistrees.\n5- Afficher les extremum de pouls.\n");
-	printf("6- Quitter l'application\n");
+	printf("6- Quitter l'application.\n");
 	//Menu #1 pour afficher les donnees
 
 	scanf("%i", &choix1);
@@ -28,11 +28,11 @@ int menu()
 		switch (choix2)
 		{
 		case 1:
-			return 21;
+			return 21;//Afficher les donnees en ordre croissant
 			break;
 
 		case 2:
-			return 22;
+			return 22;//Afficher les donnees en ordre décroissant
 			break;
 
 		default:
@@ -58,11 +58,11 @@ int menu()
 			switch (choix2)
 			{
 			case 1:
-				return 51;
+				return 51;//Affiche max
 				break;
 
 			case 2:
-				return 52;
+				return 52;//Affiche min
 				break;
 
 			default:
