@@ -43,11 +43,11 @@ int menu()
 		break;
 
 		case 3:
-			return 3;
+			return choix1;
 			break;
 
 		case 4:
-			return 4;
+			return choix1;
 			break;
 
 		case 5:

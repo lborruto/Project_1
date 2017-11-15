@@ -1,16 +1,18 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void showFile();
+#define LMAX 100
 
-void croissant();
+int showFile();
 
-void decroissant();
+int croissant();
 
-void poulsForTime();
+int decroissant();
 
-void numLine();
+int poulsForTime();
 
-void maxPouls();
+int numLine();
 
-void minPouls();
+int maxPouls();
+
+int minPouls();
