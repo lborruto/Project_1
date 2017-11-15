@@ -8,7 +8,7 @@
 
 1510676089 c:\users\tboul\onedrive - association cesi viacesi mail\ue 1\projet\github\project_1\module_c_lecture_et_traitement\traitement des données\actions.h
 
-1510731756 c:\users\tboul\onedrive - association cesi viacesi mail\ue 1\projet\github\project_1\module_c_lecture_et_traitement\traitement des données\donnees.h
+1510733511 c:\users\tboul\onedrive - association cesi viacesi mail\ue 1\projet\github\project_1\module_c_lecture_et_traitement\traitement des données\donnees.h
 	<stdlib.h>
 	<stdio.h>
 
@@ -19,9 +19,7 @@
 1510676265 source:c:\users\tboul\onedrive - association cesi viacesi mail\ue 1\projet\github\project_1\module_c_lecture_et_traitement\traitement des données\actions.c
 	"actions.h"
 
-1510677023 source:c:\users\tboul\onedrive - association cesi viacesi mail\ue 1\projet\github\project_1\module_c_lecture_et_traitement\traitement des données\donnees.c
-	<stdlib.h>
-	<stdio.h>
+1510732246 source:c:\users\tboul\onedrive - association cesi viacesi mail\ue 1\projet\github\project_1\module_c_lecture_et_traitement\traitement des données\donnees.c
 	"donnees.h"
 
 1510676562 source:c:\users\tboul\onedrive - association cesi viacesi mail\ue 1\projet\github\project_1\module_c_lecture_et_traitement\traitement des données\menu.c
