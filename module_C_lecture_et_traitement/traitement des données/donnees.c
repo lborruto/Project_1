@@ -27,9 +27,10 @@ void lectureFile()
 			}
 
 			strcpy(retourChaine[i],chaine);
-
 			i++;
 	}
+
+	fclose(csv);
 
     return 0;
 }
