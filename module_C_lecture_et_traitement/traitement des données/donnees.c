@@ -1,5 +1,3 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "donnees.h"
 
 int lectureFile()
@@ -11,7 +9,10 @@ int lectureFile()
     if (csv == NULL)
     {
         printf("Impossible d'ouvrir le fichier test.txt");
+        exit(1);
     }
+
+
 
     return 0;
 }
