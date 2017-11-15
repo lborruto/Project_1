@@ -2,13 +2,13 @@
 
 void lectureFile()
 {
-	FILE* csv;
-	char chaine[TAILLE]; //Pour enregistrer une chaîne de charactère
+	FILE* csv = NULL;
+	char str[TAILLE]; //Pour enregistrer une chaîne de charactère
 	int i;
 	char **retourChaine[i]; //Pointeurs vers des chaînes de charactères
 
 
-	csv = fopen("pouls.csv", "r+");
+	csv = fopen("pouls.csv", "r");
 
 
     if (csv == NULL)
@@ -17,16 +17,16 @@ void lectureFile()
         exit(1);
     }
 
-	while (fgets(chaine, TAILLE, csv))
+	while (fgets(str, TAILLE, csv))
 	{
-		retourChaine[i]=malloc(sizeof(char)*(strlen(chaine)));
+		retourChaine[i]=malloc(sizeof(char)*(strlen(str)));
 
-		if (chaine[strlen(chaine)-1]=='\n')
+		if (str[strlen(str)-1]=='\n')
 			{
-				chaine[strlen(chaine)-1] ='\0';
+				str[strlen(str)-1] ='\0';
 			}
 
-			strcpy(retourChaine[i],chaine);
+			strcpy(retourChaine[i],str);
 			i++;
 	}
 

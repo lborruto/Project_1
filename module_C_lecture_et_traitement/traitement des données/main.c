@@ -7,5 +7,6 @@
 
 int main()
 {
-	int i = menu();
+	int traitement;
+	traitement = menu();
 }
