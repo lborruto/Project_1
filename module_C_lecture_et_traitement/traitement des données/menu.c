@@ -25,6 +25,8 @@ int menu()
 		//Menu #2 pour le choix de l'ordre de tri
 
 		scanf("%d", &choix2);
+		printf("\n");
+
 		switch (choix2)
 		{
 		case 1:

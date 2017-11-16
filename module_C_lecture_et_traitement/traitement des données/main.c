@@ -8,17 +8,20 @@
 int main(int argc, char *argv[])
 {
 	int traitement;
+	FILE* csv;
+
+	csv = ouvrirFichier();
 
 	traitement = menu();//Affichage du menu et entre la valeur choisie par l'utilisateur dans "traitement"
 
 	switch (traitement)//Lance les fonctions nécessaires selon ce qu'a entré l'utilisateur
 	{
 	case 1://Afficher les donnees telle qu'elle etait dans le fichier .csv
-		showFile();
+		showFile(csv);
 		break;
 
 	case 21://Afficher les donnees en ordre croissant
-		croissant();
+		croissant(csv);
 		break;
 
 	case 22://Afficher les donnees en ordre décroissant

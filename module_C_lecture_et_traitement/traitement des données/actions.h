@@ -3,9 +3,9 @@
 
 #define LMAX 100
 
-int showFile();
+int showFile(FILE* csv);
 
-int croissant();
+int croissant(FILE* csv);
 
 int decroissant();
 

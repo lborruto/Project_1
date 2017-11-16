@@ -1,25 +1,18 @@
 #include "actions.h"
 
-int showFile()
+int showFile(FILE* csv)
 {
-	FILE* csv = NULL;//Variable contenant le fichier
 	char *linesFile[LMAX];//Pour stocker les lignes du fichier
 
-	csv = ouvrirFichier();
 	lireFichier(linesFile, csv);
 
 	fclose(csv);
 	return 0;
 }
 
-int croissant()
+int croissant(FILE* csv)
 {
-	FILE* csv = NULL;
-	char *linesFile[LMAX];//Pour stocker les lignes du fichier
-
-
-	csv = ouvrirFichier();
-	separationTempsEtPouls(linesFile, csv);
+	separationTempsEtPouls(csv);
 
 	fclose(csv);
 	return 0;

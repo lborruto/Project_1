@@ -34,32 +34,32 @@ void lireFichier(char** retourChaine, FILE* csv)
         printf("%s\n", retourChaine[i]);
         i++;
     }
+
 }
 
-donneesDuFichier separationTempsEtPouls(char** retourChaine, FILE* csv)
+
+int separationTempsEtPouls(FILE* csv)
 {
-	int i = 0;
-	char str[TAILLE];
-	char c = NULL;
+	char tab[100][28];
+	int i;
+	int boum[20];
+	int time[20];
+	donneesDuFichier pouls[40];
 
-	while((c = fgetc (csv)) != EOF)
+
+
+	for (i=0; i<2; i++)
 	{
-		if (c == ';' || c == '\n')//Retourne à la ligne si la chaine de caractère possède un ";" ou un "\n"
-		{
-			c = '\0';
-		}
+		fscanf(csv, "%s", tab[i]);
 
+		boum[i]=atoi(strtok(tab[i], ";"));
+		time[i]=atoi(strtok(NULL, ";"));
+
+		donneesDuFichier data1 = {boum[i], time[i]};
+		pouls[i]=data1;
+
+		printf("%d\n%d\n",pouls[i].boum,pouls[i].time);
 	}
 
-	fseek(csv, 0, SEEK_SET);//Remet le pointeur du fichier à 0
-
-	while((c=fgets(str, TAILLE, csv)) != NULL)
-	{
-		retourChaine[i]=malloc(sizeof(char)*(strlen(str)));
-
-		strcpy(retourChaine[i], str);
-		printf("%s\n", &
-				retourChaine[i]);
-		i++;
-	}
+	return 0;
 }
