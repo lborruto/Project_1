@@ -16,7 +16,7 @@ int decroissant();
 
 int poulsForTime();
 
-int numLine();
+int numLine(FILE* csv);
 
 int maxPouls();
 

@@ -14,7 +14,7 @@ int croissant(FILE* csv)
 {
     int maxTaille;
 
-    maxTaille = separationTempsEtPouls(csv);
+    maxTaille = separationTempsEtPouls(csv, pouls);
 
     int typeDeTri;
 
@@ -31,10 +31,10 @@ void triBoum(int maxTaille, donneesDuFichier pouls[])
     //int tab [6]= {0, 5, 56, 23, 1, 42, 2};
     int i;
     int j;
-	donneesDuFichier k;
+    donneesDuFichier k;
 
     maxTaille=(sizeof(pouls)/8);
-printf("%d\n", pouls[1].boum);
+    printf("%d\n", pouls[1].boum);
     for (i = 0; i<(maxTaille - 1); i++)
     {
         for (j=0; j<maxTaille - i - 1; j++)
@@ -50,7 +50,23 @@ printf("%d\n", pouls[1].boum);
         }
 
     }
-     /* for ( i = 0 ; i < maxTaille ; i++ )
-     {printf("%d\n", pouls[i].boum);}*/
+    /* for ( i = 0 ; i < maxTaille ; i++ )
+    {printf("%d\n", pouls[i].boum);}*/
 
+}
+
+int numLine(FILE* csv)
+{
+    int nbrLines = 1;
+    char c;
+
+    while ((c = getc(csv)) != EOF)
+    {
+        if (c == '\n')
+            nbrLines++;
+
+    }
+    printf("%i", nbrLines);
+
+    return nbrLines;
 }
