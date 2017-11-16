@@ -40,15 +40,26 @@ donneesDuFichier separationTempsEtPouls(char** retourChaine, FILE* csv)
 {
 	int i = 0;
 	char str[TAILLE];
-	char c;
-
-
+	char c = NULL;
 
 	while((c = fgetc (csv)) != EOF)
 	{
-		if (c == ';' || c == '\n')
+		if (c == ';' || c == '\n')//Retourne à la ligne si la chaine de caractère possède un ";" ou un "\n"
 		{
 			c = '\0';
 		}
+
+	}
+
+	fseek(csv, 0, SEEK_SET);//Remet le pointeur du fichier à 0
+
+	while((c=fgets(str, TAILLE, csv)) != NULL)
+	{
+		retourChaine[i]=malloc(sizeof(char)*(strlen(str)));
+
+		strcpy(retourChaine[i], str);
+		printf("%s\n", &
+				retourChaine[i]);
+		i++;
 	}
 }

@@ -15,9 +15,11 @@ int showFile()
 int croissant()
 {
 	FILE* csv = NULL;
+	char *linesFile[LMAX];//Pour stocker les lignes du fichier
+
 
 	csv = ouvrirFichier();
-
+	separationTempsEtPouls(linesFile, csv);
 
 	fclose(csv);
 	return 0;
