@@ -36,3 +36,19 @@ void lireFichier(char** retourChaine, FILE* csv)
     }
 }
 
+donneesDuFichier separationTempsEtPouls(char** retourChaine, FILE* csv)
+{
+	int i = 0;
+	char str[TAILLE];
+	char c;
+
+
+
+	while((c = fgetc (csv)) != EOF)
+	{
+		if (c == ';' || c == '\n')
+		{
+			c = '\0';
+		}
+	}
+}

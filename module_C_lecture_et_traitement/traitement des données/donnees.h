@@ -14,3 +14,6 @@ typedef struct donneesDuFichier
 	struct donneesDuFichier *NEXT;
 
 }donneesDuFichier;
+//Cette structure est une liste chainée servant à stocker les valeurs du temps et du pouls séparément
+
+donneesDuFichier separationTempsEtPouls(char** retourChaine, FILE* csv);//Sépare le temps du pouls
