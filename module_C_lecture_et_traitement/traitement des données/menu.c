@@ -43,16 +43,17 @@ int menu()
 		break;
 
 		case 3:
-			return 3;
+			return choix1;
 			break;
 
 		case 4:
-			return 4;
+			return choix1;
 			break;
 
 		case 5:
 			printf("Voulez-vous : (Choisissez une valeur)\n");
 			printf("1- Afficher le pouls maximum\n2- Afficher le pouls minimum\n");
+			//Menu #3 pour afficher les données
 
 			scanf("%i", &choix2);
 			switch (choix2)

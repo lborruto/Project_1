@@ -1,8 +1,19 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "donnees.csv"
 
-#define LMAX 100
 #define TAILLE 100 //Longueur max du tableau
 
-void lectureFile(); //Fonction de lecture du fichier et de son insertion dans une structure de données
+FILE* ouvrirFichier(); //Pour ouvrir le fichier
+
+void lireFichier(char** retourChaine, FILE* csv);//Lit le fichier dans l'ordre
+
+typedef struct donneesDuFichier
+{
+	char *pouls;
+	char *time;
+	struct donneesDuFichier *NEXT;
+
+}donneesDuFichier;
+//Cette structure est une liste chainée servant à stocker les valeurs du temps et du pouls séparément
+
+donneesDuFichier separationTempsEtPouls(char** retourChaine, FILE* csv);//Sépare le temps du pouls

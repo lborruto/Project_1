@@ -7,12 +7,9 @@
 
 int main(int argc, char *argv[])
 {
-	char *linesFile[LMAX]; //Pour stocker les lignes du fichier
-
 	int traitement;
-	traitement = menu(); //Affichage du menu et entre la valeur choisie par l'utilisateur dans "traitement"
 
-	lectureFile(linesFile); //Lance la lecture du fichier et les stocke dans "lineFile"
+	traitement = menu();//Affichage du menu et entre la valeur choisie par l'utilisateur dans "traitement"
 
 	switch (traitement)//Lance les fonctions nécessaires selon ce qu'a entré l'utilisateur
 	{
@@ -25,23 +22,23 @@ int main(int argc, char *argv[])
 		break;
 
 	case 22://Afficher les donnees en ordre décroissant
-		decroissant();
+		//decroissant();
 		break;
 
 	case 3://Afficher des donnees pour un temps donnes
-		poulsForTime();
+		//poulsForTime();
 		break;
 
 	case 4://Afficher le nombre de lignes enregistrees
-		numLine();
+		//numLine();
 		break;
 
 	case 51://Affiche max pouls
-		maxPouls();
+		//maxPouls();
 		break;
 
 	case 52://Affiche min pouls
-		minPouls();
+		//minPouls();
 		break;
 
 	default://Sécurité
