@@ -32,6 +32,7 @@ void lireFichier(char** retourChaine, FILE* csv)
 
         strcpy(retourChaine[i],str);
         printf("%s\n", retourChaine[i]);
+
         i++;
     }
 
@@ -46,6 +47,7 @@ int separationTempsEtPouls(FILE* csv)
 	int boum[20];
 	int time[20];
 	donneesDuFichier pouls[40];
+	int max;
 
 	for (i=0; i<2; i++)
 	{
@@ -60,5 +62,8 @@ int separationTempsEtPouls(FILE* csv)
 		printf("%d\n%d\n",pouls[i].boum,pouls[i].time);
 	}
 
-	return 0;
+	max=(sizeof(pouls)/8);
+	//printf("%i", max);
+
+	return max;
 }

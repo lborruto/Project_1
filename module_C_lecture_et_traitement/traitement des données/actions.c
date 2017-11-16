@@ -12,27 +12,28 @@ int showFile(FILE* csv)
 
 int croissant(FILE* csv)
 {
-    separationTempsEtPouls(csv);
+    int max;
+
+    max = separationTempsEtPouls(csv);
 
     int typeDeTri;
 
     typeDeTri = menuTri();
 
-    triBoum();
+    triBoum(max);
 
     fclose(csv);
     return 0;
 }
 
-void triBoum()
+void triBoum(int max)
 {
     //int tab [6]= {0, 5, 56, 23, 1, 42, 2};
     int i;
     int j;
     int k;
-    int max;
 
-    max=(sizeof(pouls)/4);
+    max=(sizeof(pouls)/8);
 
     for (i = 0; i<(max - 1); i++)
     {
@@ -51,14 +52,6 @@ void triBoum()
     }
       for ( i = 0 ; i < max ; i++ )
      {printf("%d\n", pouls[i].boum);}
-    /*{
-    	if (pouls[i].boum>pouls[i+1].boum)
-    	{
-    		pouls[i].boum=k;
-    		pouls[i].boum=pouls[i+1].boum;
-    		k=pouls[i+1].boum;
-    	}
-    	printf("%d %d\n", pouls[i].boum, pouls[i].time);
-    }*/
+
 }
 
