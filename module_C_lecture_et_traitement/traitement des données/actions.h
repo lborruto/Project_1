@@ -10,7 +10,7 @@ int showFile(FILE* csv);
 
 int croissant(FILE* csv);
 
-void triBoum();
+void triBoum(int maxTaille, donneesDuFichier pouls[]);
 
 int decroissant();
 

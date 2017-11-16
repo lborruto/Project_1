@@ -39,14 +39,13 @@ void lireFichier(char** retourChaine, FILE* csv)
 }
 
 
-int separationTempsEtPouls(FILE* csv)
+int separationTempsEtPouls(FILE* csv, donneesDuFichier pouls[])
 {
 	char tab[100][28];
 	char c;
 	int i;
 	int boum[20];
 	int time[20];
-	donneesDuFichier pouls[40];
 	int max;
 
 	for (i=0; i<2; i++)
