@@ -1,4 +1,4 @@
-#ifndef MENU_H
+#ifndef MENU_H//Permet d'éviter de définir deux fois le .h
 #define MENU_H
 
 

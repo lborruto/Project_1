@@ -1,4 +1,4 @@
-#ifndef DONNEES_H
+#ifndef DONNEES_H//Permet d'éviter de définir deux fois le .h
 #define DONNEES_H
 
 
