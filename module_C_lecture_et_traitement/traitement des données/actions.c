@@ -12,7 +12,10 @@ int showFile(FILE* csv)
 
 int croissant(FILE* csv)
 {
+	int typeDeTri;
+
 	separationTempsEtPouls(csv);
+	typeDeTri = menuTri();
 
 	fclose(csv);
 	return 0;

@@ -58,7 +58,7 @@ int separationTempsEtPouls(FILE* csv)
 		donneesDuFichier data1 = {boum[i], time[i]};
 		pouls[i]=data1;
 
-		printf("%d\n%d\n",pouls[i].boum,pouls[i].time);
+		//printf("%d\n%d\n",pouls[i].boum,pouls[i].time);
 	}
 
 	return 0;

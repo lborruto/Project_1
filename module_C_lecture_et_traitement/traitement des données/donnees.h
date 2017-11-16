@@ -1,3 +1,7 @@
+#ifndef DONNEES_H
+#define DONNEES_H
+
+
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -11,9 +15,10 @@ typedef struct donneesDuFichier
 {
 	int boum;
 	int time;
-	struct donneesDuFichier *NEXT;
 
 }donneesDuFichier;
-//Cette structure est une liste chainée servant à stocker les valeurs du temps et du pouls séparément
+//Cette structure stocke séparément le pouls (boum) et le temps(time)
 
 int separationTempsEtPouls(FILE* csv);//Sépare le temps du pouls
+
+#endif

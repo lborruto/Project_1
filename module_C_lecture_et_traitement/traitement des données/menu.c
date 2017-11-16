@@ -85,3 +85,15 @@ int menu()
 		}
 
 }
+
+int menuTri()
+{
+	int tri;
+
+	printf("Que voulez-vous trier ?\n");
+	printf("1- pouls\n2- temps\n");
+
+	scanf("%i", &tri);
+
+	return tri;
+}

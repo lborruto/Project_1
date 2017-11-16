@@ -6,22 +6,24 @@
 	"donnees.h"
 	"menu.h"
 
-1510827544 c:\users\tboul\onedrive - association cesi viacesi mail\ue 1\projet\github\project_1\module_c_lecture_et_traitement\traitement des données\actions.h
+1510829963 c:\users\tboul\onedrive - association cesi viacesi mail\ue 1\projet\github\project_1\module_c_lecture_et_traitement\traitement des données\actions.h
+	<stdlib.h>
+	<stdio.h>
+	"menu.h"
+	"donnees.h"
+
+1510829923 c:\users\tboul\onedrive - association cesi viacesi mail\ue 1\projet\github\project_1\module_c_lecture_et_traitement\traitement des données\donnees.h
 	<stdlib.h>
 	<stdio.h>
 
-1510827494 c:\users\tboul\onedrive - association cesi viacesi mail\ue 1\projet\github\project_1\module_c_lecture_et_traitement\traitement des données\donnees.h
-	<stdlib.h>
-	<stdio.h>
-
-1510735654 c:\users\tboul\onedrive - association cesi viacesi mail\ue 1\projet\github\project_1\module_c_lecture_et_traitement\traitement des données\menu.h
+1510829911 c:\users\tboul\onedrive - association cesi viacesi mail\ue 1\projet\github\project_1\module_c_lecture_et_traitement\traitement des données\menu.h
 	<stdio.h>
 	<stdlib.h>
 
-1510827494 source:c:\users\tboul\onedrive - association cesi viacesi mail\ue 1\projet\github\project_1\module_c_lecture_et_traitement\traitement des données\actions.c
+1510829266 source:c:\users\tboul\onedrive - association cesi viacesi mail\ue 1\projet\github\project_1\module_c_lecture_et_traitement\traitement des données\actions.c
 	"actions.h"
 
-1510827494 source:c:\users\tboul\onedrive - association cesi viacesi mail\ue 1\projet\github\project_1\module_c_lecture_et_traitement\traitement des données\donnees.c
+1510828557 source:c:\users\tboul\onedrive - association cesi viacesi mail\ue 1\projet\github\project_1\module_c_lecture_et_traitement\traitement des données\donnees.c
 	"donnees.h"
 
 1510758241 source:c:\users\tboul\onedrive - association cesi viacesi mail\ue 1\projet\github\project_1\module_c_lecture_et_traitement\traitement des données\menu.c
