@@ -12,6 +12,7 @@ int menu()
 	//Menu #1 pour afficher les donnees
 
 	scanf("%i", &choix1);
+	printf("\n");
 
 	switch (choix1)
 	{
@@ -94,6 +95,7 @@ int menuTri()
 	printf("1- pouls\n2- temps\n");
 
 	scanf("%i", &tri);
+	printf("\n");
 
 	return tri;
 }

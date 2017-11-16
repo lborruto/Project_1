@@ -14,7 +14,7 @@ int croissant(FILE* csv)
 {
     int maxTaille;
 
-    maxTaille = separationTempsEtPouls(csv, pouls);
+    maxTaille = separationTempsEtPouls(csv);
 
     int typeDeTri;
 
@@ -28,7 +28,6 @@ int croissant(FILE* csv)
 
 void triBoum(int maxTaille, donneesDuFichier pouls[])
 {
-    //int tab [6]= {0, 5, 56, 23, 1, 42, 2};
     int i;
     int j;
     donneesDuFichier k;
