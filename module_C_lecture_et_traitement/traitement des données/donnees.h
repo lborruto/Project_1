@@ -13,11 +13,13 @@ void lireFichier(char** retourChaine, FILE* csv);//Lit le fichier dans l'ordre
 
 typedef struct donneesDuFichier
 {
-	int boum;
-	int time;
+	int boum;//pouls
+	int time;//temps
 
 }donneesDuFichier;
 //Cette structure stocke séparément le pouls (boum) et le temps(time)
+
+donneesDuFichier pouls[40];
 
 int separationTempsEtPouls(FILE* csv);//Sépare le temps du pouls
 

@@ -41,12 +41,11 @@ void lireFichier(char** retourChaine, FILE* csv)
 int separationTempsEtPouls(FILE* csv)
 {
 	char tab[100][28];
+	char c;
 	int i;
 	int boum[20];
 	int time[20];
 	donneesDuFichier pouls[40];
-
-
 
 	for (i=0; i<2; i++)
 	{
@@ -58,7 +57,7 @@ int separationTempsEtPouls(FILE* csv)
 		donneesDuFichier data1 = {boum[i], time[i]};
 		pouls[i]=data1;
 
-		//printf("%d\n%d\n",pouls[i].boum,pouls[i].time);
+		printf("%d\n%d\n",pouls[i].boum,pouls[i].time);
 	}
 
 	return 0;
