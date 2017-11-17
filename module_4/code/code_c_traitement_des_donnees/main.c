@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 		break;
 
 	case 22://Afficher les donnees en ordre décroissant
-		//decroissant();
+		decroissant(csv);
 		break;
 
 	case 3://Afficher des donnees pour un temps donnes

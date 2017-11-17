@@ -1,8 +1,10 @@
-#include <stdlib.h>
-#include <stdio.h>
+#ifndef ACTIONS_H//Permet d'éviter de définir deux fois le .h
+#define ACTIONS_H
 
-#include "menu.h"
 #include "donnees.h"
+
+#include <stdio.h>
+#include <stdlib.h>
 
 #define LMAX 100
 
@@ -12,7 +14,13 @@ int croissant(FILE* csv);
 
 void triBoum(int maxTaille, donneesDuFichier pouls[]);
 
-int decroissant();
+void triTime(int maxTaille, donneesDuFichier pouls[]);
+
+int decroissant(FILE* csv);
+
+void reverseTriBoum(int maxTaille, donneesDuFichier pouls[]);
+
+void reverseTriTime(int maxTaille, donneesDuFichier pouls[]);
 
 int poulsForTime();
 
@@ -21,3 +29,6 @@ int numLine(FILE* csv);
 int maxPouls();
 
 int minPouls();
+
+
+#endif

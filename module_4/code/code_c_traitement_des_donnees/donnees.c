@@ -1,4 +1,6 @@
 #include "donnees.h"
+#include "actions.h"
+#include "menu.h"
 
 FILE* ouvrirFichier()
 {
@@ -42,29 +44,32 @@ void lireFichier(char** retourChaine, FILE* csv)
 int separationTempsEtPouls(FILE* csv)
 {
 	char tab[100][28];
-	char c;
-	int i;
+	int i, j;
 	int boum[20];
-	int time[20];
+	int temps[20];
 	int max;
 	int lignesMax;
-	donneesDuFichier pouls[i];
+	donneesDuFichier pouls[40];
 
 	lignesMax = numLine(csv);
 
-	for (i=0; i<10; i++)
+	for (i=0; i<lignesMax; i++)
 	{
 		fscanf(csv, "%s", tab[i]);
 
 		boum[i]=atoi(strtok(tab[i], ";"));
-		time[i]=atoi(strtok(NULL, ";"));
+		temps[i]=atoi(strtok(NULL, ";"));
 
-		donneesDuFichier data1 = {boum[i], time[i]};
+		donneesDuFichier data1 = {boum[i], temps[i]};
 		pouls[i]=data1;
 
-		printf("%i\n%i\n",pouls[i].boum, pouls[i].time);
 	}
-	printf("%i %i", pouls[2].boum, pouls[2].time);
+
+	for (j=0; j<10; j++)
+	{
+		printf("%i %i\n", pouls[j].boum, pouls[j].temps);
+	}
+
 
 	max=(sizeof(pouls)/8);
 	//printf("%i", max);
