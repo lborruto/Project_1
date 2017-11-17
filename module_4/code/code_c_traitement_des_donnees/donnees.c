@@ -57,8 +57,8 @@ int separationTempsEtPouls(FILE* csv)
 	{
 		fscanf(csv, "%s", tab[i]);
 
-		boum[i]=atoi(strtok(tab[i], ";"));
-		temps[i]=atoi(strtok(NULL, ";"));
+		boum[i]=atoi(strtok(tab[i],";"));
+		temps[i]=atoi(strtok(NULL,";"));
 
 		donneesDuFichier data1 = {boum[i], temps[i]};
 		pouls[i]=data1;
