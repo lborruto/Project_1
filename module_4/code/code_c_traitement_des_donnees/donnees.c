@@ -50,11 +50,10 @@ int separationTempsEtPouls(FILE* csv)
 	int max;
 	int lignesMax;
 	donneesDuFichier pouls[40];
-	donneesDuFichier data1;
 
 	lignesMax = numLine(csv);
 
-	for (i=0; i<10; i++)
+	for (i=0; i<lignesMax; i++)
 	{
 		fscanf(csv, "%s", tab[i]);
 
@@ -63,7 +62,6 @@ int separationTempsEtPouls(FILE* csv)
 
 		donneesDuFichier data1 = {boum[i], temps[i]};
 		pouls[i]=data1;
-
 
 	}
 

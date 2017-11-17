@@ -16,7 +16,11 @@ void triBoum(int maxTaille, donneesDuFichier pouls[]);
 
 void triTime(int maxTaille, donneesDuFichier pouls[]);
 
-int decroissant();
+int decroissant(FILE* csv);
+
+void reverseTriBoum(int maxTaille, donneesDuFichier pouls[]);
+
+void reverseTriTime(int maxTaille, donneesDuFichier pouls[]);
 
 int poulsForTime();
 
