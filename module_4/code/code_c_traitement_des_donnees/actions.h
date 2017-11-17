@@ -22,11 +22,11 @@ void reverseTriBoum(int maxTaille, donneesDuFichier pouls[]);
 
 void reverseTriTime(int maxTaille, donneesDuFichier pouls[]);
 
-int poulsForTime();
+int poulsForTime(FILE* csv);
 
 int numLine(FILE* csv);
 
-int maxPouls();
+int maxPouls(FILE* csv);
 
 int minPouls();
 

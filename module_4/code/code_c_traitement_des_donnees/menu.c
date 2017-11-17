@@ -99,3 +99,14 @@ int menuTri()
 
 	return tri;
 }
+
+int menuPoulsTime()
+{
+	int Choix10;
+
+	printf("Entrez un temps en millisecondes.\n");
+
+	scanf("%i", &Choix10);
+
+	return Choix10;
+}

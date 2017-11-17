@@ -179,6 +179,39 @@ void reverseTriTime(int maxTaille, donneesDuFichier pouls[])
     {printf("%d\n", pouls[i].boum);}*/
 }
 
+int poulsForTime(FILE* csv)
+{
+    int tempsChoisis;
+	int i;
+	int emplacement=0;
+	int nbrLines;
+
+    tempsChoisis = menuPoulsTime();
+    nbrLines = numLine(csv);
+
+	//Début de la recherche
+
+    for(i=0; i<=nbrLines-1; i++)
+    {
+        if(pouls[i].temps==tempsChoisis)
+        {
+            emplacement=i+1;
+            i=2*nbrLines;
+        }
+    }
+    if(i==2*nbrLines+1)
+    {
+        printf("Le pouls correspondant au temps %i est : %i\n", pouls[emplacement].temps, pouls[emplacement].boum);
+    }
+    else
+    {
+        printf("Le temps %i n'existe pas\n", tempsChoisis);
+    }
+
+    fclose(csv);
+	return 0;
+}
+
 int numLine(FILE* csv)
 {
     int nbrLines = 1;//Initialise le nombre de lignes
@@ -195,4 +228,22 @@ int numLine(FILE* csv)
     printf("Il y a %i lignes dans le fichier .csv\n", nbrLines);
 
     return nbrLines;
+}
+
+int maxPouls(FILE* csv)
+{
+	int nbrLines;
+
+	nbrLines = numLine(csv);
+
+	printf("Le maximum de pouls est %i", pouls[nbrLines].boum);
+
+	return 0;
+}
+
+int minPouls()
+{
+	printf("Le minimum de pouls est %i", pouls[0].boum);
+
+	return 0;
 }

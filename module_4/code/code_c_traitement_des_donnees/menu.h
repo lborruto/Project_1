@@ -9,4 +9,6 @@ int menu();
 
 int menuTri();
 
+int menuPoulsTime();
+
 #endif

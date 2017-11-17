@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 		break;
 
 	case 3://Afficher des donnees pour un temps donnes
-		//poulsForTime();
+		poulsForTime(csv);
 		break;
 
 	case 4://Afficher le nombre de lignes enregistrees
@@ -37,11 +37,11 @@ int main(int argc, char *argv[])
 		break;
 
 	case 51://Affiche max pouls
-		//maxPouls();
+		maxPouls(csv);
 		break;
 
 	case 52://Affiche min pouls
-		//minPouls();
+		minPouls();
 		break;
 
 	default://Sécurité
