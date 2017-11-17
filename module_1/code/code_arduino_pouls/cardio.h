@@ -1,14 +1,7 @@
-//Ce fichier contient toutes les fonctions nécessaires au calcul du pouls.
+#ifndef CARDIO_H_INCLUDED
+#define CARDIO_H_INCLUDED
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+int verifcardio(int valeurActuelle, int valeurSeuil, int valeurPrecedente);
+int calculcardio(int tempsDetection, int tempsPrecedent, int valeurSeuil);
 
-int valeurPouls(int lecture, unsigned long temps, unsigned long tempsPrecedent);
-/*fonction calculPouls
- * calcule le pouls en fonction du nombre de battements
- */
-
-#ifdef __cplusplus
-} // extern "C"
-#endif
+#endif // CARDIO_H_INCLUDED
