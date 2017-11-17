@@ -189,7 +189,7 @@ int poulsForTime(FILE* csv)
 	separationTempsEtPouls(csv);
 
     tempsChoisis = menuPoulsTime();
-    nbrLines = numLine(csv);
+    nbrLines = numLine(csv, 0);
 
 	//Début de la recherche
 
@@ -214,7 +214,7 @@ int poulsForTime(FILE* csv)
 	return 0;
 }
 
-int numLine(FILE* csv)
+int numLine(FILE* csv, int i)
 {
     int nbrLines = 1;//Initialise le nombre de lignes
     char c;
@@ -227,7 +227,10 @@ int numLine(FILE* csv)
     }
     //Comptage des \n (nombres de lignes)
 
-    printf("Il y a %i lignes dans le fichier .csv\n", nbrLines);
+	if (i == 1)
+	{
+		printf("Il y a %i lignes dans le fichier .csv\n", nbrLines);
+	}
 
     return nbrLines;
 }
@@ -238,7 +241,7 @@ int maxPouls(FILE* csv)
 
 	separationTempsEtPouls(csv);
 
-	nbrLines = numLine(csv);
+	nbrLines = numLine(csv, 0);
 
 	printf("Le maximum de pouls est %i", pouls[nbrLines].boum);
 

@@ -5,7 +5,7 @@
 FILE* ouvrirFichier()
 {
 	FILE* csv = NULL;
-    csv = fopen("donnees.csv", "r");
+    csv = fopen("C:\\Users\\tboul\\OneDrive - Association Cesi Viacesi mail\\UE 1\\projet\\GIThub\\Project_1\\module_3\\code\\processing\\sketch\\Battements.csv", "r");
 
 
     if (csv == NULL) //Verification de l'ouverture du fichier
@@ -51,7 +51,7 @@ int separationTempsEtPouls(FILE* csv)
 	int lignesMax;
 	donneesDuFichier pouls[40];
 
-	lignesMax = numLine(csv);
+	lignesMax = numLine(csv, 0);
 
 	for (i=0; i<lignesMax; i++)
 	{

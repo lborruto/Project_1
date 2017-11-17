@@ -24,7 +24,7 @@ void reverseTriTime(int maxTaille, donneesDuFichier pouls[]);
 
 int poulsForTime(FILE* csv);
 
-int numLine(FILE* csv);
+int numLine(FILE* csv, int i);
 
 int maxPouls(FILE* csv);
 

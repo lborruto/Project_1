@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 		break;
 
 	case 4://Afficher le nombre de lignes enregistrees
-		numLine(csv);
+		numLine(csv, 1);
 		break;
 
 	case 51://Affiche max pouls
