@@ -16,7 +16,7 @@ void loop() {
   long tempsDetection;
 
   valeurActuelle = analogRead(0);
-  valeurSeuil = 64;
+  valeurSeuil = 910;
   verifcardio(valeurActuelle, valeurSeuil, valeurPrecedente);
   tempsDetection = millis();
   calculcardio(tempsDetection, tempsPrecedent, valeurSeuil);
