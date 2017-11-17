@@ -1,4 +1,6 @@
 #include "actions.h"
+#include "menu.h"
+#include "donnees.h"
 
 int showFile(FILE* csv)
 {
@@ -52,6 +54,33 @@ void triBoum(int maxTaille, donneesDuFichier pouls[])
     /* for ( i = 0 ; i < maxTaille ; i++ )
     {printf("%d\n", pouls[i].boum);}*/
 
+}
+
+void triTime(int maxTaille, donneesDuFichier pouls[])
+{
+    int i;
+    int j;
+    donneesDuFichier k;
+
+    maxTaille=(sizeof(pouls)/8);
+    printf("%d\n", pouls[1].temps);
+    for (i = 0; i<(maxTaille - 1); i++)
+    {
+        for (j=0; j<maxTaille - i - 1; j++)
+        {
+            if (pouls[j].temps>pouls[j+1].temps)
+            {
+                k=pouls[j];
+                pouls[j]=pouls[j+1];
+                pouls[j+1]=k;
+
+            }
+
+        }
+
+    }
+    /* for ( i = 0 ; i < maxTaille ; i++ )
+    {printf("%d\n", pouls[i].boum);}*/
 }
 
 int numLine(FILE* csv)
