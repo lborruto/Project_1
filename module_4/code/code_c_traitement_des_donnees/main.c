@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 		break;
 
 	case 52://Affiche min pouls
-		minPouls();
+		minPouls(csv);
 		break;
 
 	default://Sécurité
