@@ -28,7 +28,7 @@ int numLine(FILE* csv);
 
 int maxPouls(FILE* csv);
 
-int minPouls();
+int minPouls(FILE* csv);
 
 
 #endif

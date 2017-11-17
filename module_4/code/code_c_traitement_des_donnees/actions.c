@@ -186,6 +186,8 @@ int poulsForTime(FILE* csv)
 	int emplacement=0;
 	int nbrLines;
 
+	separationTempsEtPouls(csv);
+
     tempsChoisis = menuPoulsTime();
     nbrLines = numLine(csv);
 
@@ -234,6 +236,8 @@ int maxPouls(FILE* csv)
 {
 	int nbrLines;
 
+	separationTempsEtPouls(csv);
+
 	nbrLines = numLine(csv);
 
 	printf("Le maximum de pouls est %i", pouls[nbrLines].boum);
@@ -241,8 +245,10 @@ int maxPouls(FILE* csv)
 	return 0;
 }
 
-int minPouls()
+int minPouls(FILE* csv)
 {
+	separationTempsEtPouls(csv);
+
 	printf("Le minimum de pouls est %i", pouls[0].boum);
 
 	return 0;
