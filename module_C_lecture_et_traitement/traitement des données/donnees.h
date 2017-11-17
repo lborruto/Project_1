@@ -17,7 +17,7 @@ typedef struct donneesDuFichier
 	int time;//temps
 
 }donneesDuFichier;
-//Cette structure stocke séparément le pouls (boum) et le temps(time)
+//Cette structure stocke séparément le pouls (boum) et le temps(time) dans des tableaux.
 
 donneesDuFichier pouls[10];
 

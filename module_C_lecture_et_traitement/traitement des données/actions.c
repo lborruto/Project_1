@@ -56,7 +56,7 @@ void triBoum(int maxTaille, donneesDuFichier pouls[])
 
 int numLine(FILE* csv)
 {
-    int nbrLines = 1;
+    int nbrLines = 1;//Initialise le nombre de lignes
     char c;
 
     while ((c = getc(csv)) != EOF)
@@ -65,7 +65,9 @@ int numLine(FILE* csv)
             nbrLines++;
 
     }
-    printf("%i", nbrLines);
+    //Comptage des \n (nombres de lignes)
+
+    printf("Il y a %i lignes dans le fichier .csv\n", nbrLines);
 
     return nbrLines;
 }
