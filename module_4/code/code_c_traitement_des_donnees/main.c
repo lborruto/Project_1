@@ -44,6 +44,10 @@ int main(int argc, char *argv[])
 		minPouls(csv);
 		break;
 
+	case 6://Affiche la moyenne
+		moyennePouls(csv);
+		break;
+
 	default://Sécurité
 		printf("Fatal error !");
 		exit(-1);

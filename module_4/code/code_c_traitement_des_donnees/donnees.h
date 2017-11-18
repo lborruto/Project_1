@@ -19,7 +19,7 @@ typedef struct donneesDuFichier
 }donneesDuFichier;
 //Cette structure stocke séparément le pouls (boum) et le temps(temps) dans des tableaux.
 
-donneesDuFichier pouls[40];
+donneesDuFichier pouls[TAILLE];
 
 int separationTempsEtPouls(FILE* csv);//Sépare le temps du pouls
 

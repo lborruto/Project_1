@@ -12,15 +12,15 @@ int showFile(FILE* csv);
 
 int croissant(FILE* csv);
 
-void triBoum(int maxTaille, donneesDuFichier pouls[]);
+void triBoum(int maxTaille, int print);
 
-void triTime(int maxTaille, donneesDuFichier pouls[]);
+void triTime(int maxTaille);
 
 int decroissant(FILE* csv);
 
-void reverseTriBoum(int maxTaille, donneesDuFichier pouls[]);
+void reverseTriBoum(int maxTaille);
 
-void reverseTriTime(int maxTaille, donneesDuFichier pouls[]);
+void reverseTriTime(int maxTaille);
 
 int poulsForTime(FILE* csv);
 
@@ -29,6 +29,8 @@ int numLine(FILE* csv, int i);
 int maxPouls(FILE* csv);
 
 int minPouls(FILE* csv);
+
+int moyennePouls(FILE* csv);
 
 
 #endif
