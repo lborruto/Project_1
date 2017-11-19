@@ -17,6 +17,7 @@ int croissant(FILE* csv)
     int maxTaille;
 
     maxTaille = separationTempsEtPouls(csv);
+    //printf("maxTaille =%i", maxTaille);
 
     int typeDeTri;
 
@@ -25,11 +26,11 @@ int croissant(FILE* csv)
     switch (typeDeTri)
     {
     case 1:
-        triBoum(maxTaille, pouls);
+        triBoum(maxTaille, 1);
         break;
 
     case 2:
-        triTime(maxTaille, pouls);
+        triTime(maxTaille);
         break;
 
     default:
@@ -41,14 +42,14 @@ int croissant(FILE* csv)
     return 0;
 }
 
-void triBoum(int maxTaille, donneesDuFichier pouls[])
+void triBoum(int maxTaille, int print)
 {
     int i;
     int j;
     donneesDuFichier k;
 
     maxTaille=(sizeof(pouls)/8);
-    printf("%d\n", pouls[1].boum);
+    //printf("Premier boum = %d\n", pouls[0].boum);
     for (i = 0; i<(maxTaille - 1); i++)
     {
         for (j=0; j<maxTaille - i - 1; j++)
@@ -64,19 +65,29 @@ void triBoum(int maxTaille, donneesDuFichier pouls[])
         }
 
     }
-    /* for ( i = 0 ; i < maxTaille ; i++ )
-    {printf("%d\n", pouls[i].boum);}*/
+
+    if (print == 1)
+	{
+	for ( i = 0 ; i < maxTaille ; i++ )
+    {
+        if (pouls[i].boum > 0)
+        {
+            printf("pouls = %d pour %d millisecondes\n", pouls[i].boum, pouls[i].temps);
+        }
+
+    }
+	}
 
 }
 
-void triTime(int maxTaille, donneesDuFichier pouls[])
+void triTime(int maxTaille)
 {
     int i;
     int j;
     donneesDuFichier k;
 
     maxTaille=(sizeof(pouls)/8);
-    printf("%d\n", pouls[1].temps);
+    //printf("%d\n", pouls[1].temps);
     for (i = 0; i<(maxTaille - 1); i++)
     {
         for (j=0; j<maxTaille - i - 1; j++)
@@ -92,8 +103,13 @@ void triTime(int maxTaille, donneesDuFichier pouls[])
         }
 
     }
-    /* for ( i = 0 ; i < maxTaille ; i++ )
-    {printf("%d\n", pouls[i].boum);}*/
+    for ( i = 0 ; i < maxTaille ; i++ )
+    {
+        if (pouls[i].boum > 0)
+        {
+            printf("temps = %d. Son pouls correspondant est %d\n", pouls[i].temps, pouls[i].boum);
+        }
+    }
 }
 
 int decroissant(FILE* csv)
@@ -109,11 +125,11 @@ int decroissant(FILE* csv)
     switch (typeDeTri)
     {
     case 1:
-        reverseTriBoum(maxTaille, pouls);
+        reverseTriBoum(maxTaille);
         break;
 
     case 2:
-        reverseTriTime(maxTaille, pouls);
+        reverseTriTime(maxTaille);
         break;
 
     default:
@@ -125,14 +141,14 @@ int decroissant(FILE* csv)
     return 0;
 }
 
-void reverseTriBoum(int maxTaille, donneesDuFichier pouls[])
+void reverseTriBoum(int maxTaille)
 {
     int i;
     int j;
     donneesDuFichier k;
 
     maxTaille=(sizeof(pouls)/8);
-    printf("%d\n", pouls[1].boum);
+    //printf("%d\n", pouls[1].boum);
     for (i = 0; i>(maxTaille - 1); i++)
     {
         for (j=0; j>maxTaille - i - 1; j++)
@@ -148,18 +164,24 @@ void reverseTriBoum(int maxTaille, donneesDuFichier pouls[])
         }
 
     }
-    /* for ( i = 0 ; i < maxTaille ; i++ )
-    {printf("%d\n", pouls[i].boum);}*/
+    for ( i = 0 ; i < maxTaille ; i++ )
+    {
+        if (pouls[i].boum > 0)
+        {
+            printf("pouls = %d\n pour %d\n millisecondes\n", pouls[i].boum, pouls[i].temps);
+        }
+
+    }
 }
 
-void reverseTriTime(int maxTaille, donneesDuFichier pouls[])
+void reverseTriTime(int maxTaille)
 {
     int i;
     int j;
     donneesDuFichier k;
 
     maxTaille=(sizeof(pouls)/8);
-    printf("%d\n", pouls[1].temps);
+    //printf("%d\n", pouls[1].temps);
     for (i = 0; i>(maxTaille - 1); i++)
     {
         for (j=0; j>maxTaille - i - 1; j++)
@@ -175,43 +197,64 @@ void reverseTriTime(int maxTaille, donneesDuFichier pouls[])
         }
 
     }
-    /* for ( i = 0 ; i < maxTaille ; i++ )
-    {printf("%d\n", pouls[i].boum);}*/
+    for ( i = 0 ; i < maxTaille ; i++ )
+    {
+        if (pouls[i].boum > 0)
+        {
+            printf("pouls = %d pour %d millisecondes\n", pouls[i].boum, pouls[i].temps);
+        }
+
+    }
 }
 
 int poulsForTime(FILE* csv)
 {
     int tempsChoisis;
-	int i;
-	int emplacement=0;
-	int nbrLines;
+    int demi;
+    int emplacement=0;
+    int nbrLines;
+    int rechercheTerminee = 1;
 
-	separationTempsEtPouls(csv);
+    separationTempsEtPouls(csv);
 
     tempsChoisis = menuPoulsTime();
     nbrLines = numLine(csv, 0);
 
-	//Début de la recherche
+    //Début de la recherche
 
-    for(i=0; i<=nbrLines-1; i++)
+    while (rechercheTerminee)
     {
-        if(pouls[i].temps==tempsChoisis)
+        int borneSuperieure = nbrLines - 1, borneInferieure = 0;
+
+        demi = (borneSuperieure + borneInferieure) / 2;
+
+        if (tempsChoisis < pouls[demi].temps)
         {
-            emplacement=i+1;
-            i=2*nbrLines;
+            borneSuperieure = demi - 1;
         }
-    }
-    if(i==2*nbrLines+1)
-    {
-        printf("Le pouls correspondant au temps %i est : %i\n", pouls[emplacement].temps, pouls[emplacement].boum);
-    }
-    else
-    {
-        printf("Le temps %i n'existe pas\n", tempsChoisis);
+        else
+        {
+            borneInferieure = demi + 1;
+        }
+
+        if (borneSuperieure<borneInferieure || tempsChoisis == pouls[demi].temps)
+        {
+            rechercheTerminee = 0;
+        }
+
+        if (tempsChoisis == pouls[demi].temps)
+		{
+			printf("Pour le temps %d, le pouls valait %d\n", pouls[demi].temps, pouls[demi].boum);
+		}
+		else
+		{
+			printf("Le temps %d n'a pas été trouvé.\n", tempsChoisis);
+			exit(50);
+		}
     }
 
     fclose(csv);
-	return 0;
+    return 0;
 }
 
 int numLine(FILE* csv, int i)
@@ -227,32 +270,66 @@ int numLine(FILE* csv, int i)
     }
     //Comptage des \n (nombres de lignes)
 
-	if (i == 1)
-	{
-		printf("Il y a %i lignes dans le fichier .csv\n", nbrLines);
-	}
+    if (i == 1)
+    {
+        printf("Il y a %i lignes dans le fichier .csv\n", nbrLines);
+    }
 
     return nbrLines;
 }
 
 int maxPouls(FILE* csv)
 {
-	int nbrLines;
+    int nbrLines, maxTaille;
 
-	separationTempsEtPouls(csv);
+    maxTaille = separationTempsEtPouls(csv);
 
-	nbrLines = numLine(csv, 0);
+    rewind(csv);
 
-	printf("Le maximum de pouls est %i", pouls[nbrLines].boum);
+    nbrLines = numLine(csv, 1);
 
-	return 0;
+    triBoum(maxTaille, 1);
+
+    printf("Le maximum de pouls est %i\n", pouls[TAILLE-1].boum);
+
+    return 0;
 }
 
 int minPouls(FILE* csv)
 {
-	separationTempsEtPouls(csv);
+    int maxTaille, nbrLines;
 
-	printf("Le minimum de pouls est %i", pouls[0].boum);
+    maxTaille =separationTempsEtPouls(csv);
+
+    rewind(csv);
+
+    nbrLines = numLine(csv, 1);
+
+    triBoum(maxTaille, 0);
+
+    printf("Le minimum de pouls est %i\n", pouls[TAILLE - nbrLines].boum);
+
+    return 0;
+}
+
+int moyennePouls(FILE* csv)
+{
+	double moyenne;
+	int i;
+	int maxTaille = separationTempsEtPouls(csv);
+	rewind(csv);
+	int nbrLines = numLine(csv, 0);
+
+	moyenne = 0;
+
+	for (i = 0; i<TAILLE - 1; i++)
+	{
+		moyenne += (double) pouls[i].boum;
+	}
+
+	moyenne /= nbrLines;
+
+	printf("La moyenne du pouls est de %f", moyenne);
 
 	return 0;
 }
