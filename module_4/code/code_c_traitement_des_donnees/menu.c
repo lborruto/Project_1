@@ -8,7 +8,7 @@ int menu()
 	printf("Selectionnez une option :\n");
 	printf("1- Afficher les donnees telle qu'elle etait dans le fichier .csv.\n2- Afficher les donnees en ordre croissant / décroissant.\n3- Afficher des donnees pour un temps donnes.\n");
 	printf("4- Afficher le nombre de lignes enregistrees.\n5- Afficher les extremum de pouls.\n");
-	printf("6- Afficher la moxenne de pouls\n");
+	printf("6- Afficher la moyenne de pouls\n");
 	printf("7- Quitter l'application.\n");
 	//Menu #1 pour afficher les donnees
 

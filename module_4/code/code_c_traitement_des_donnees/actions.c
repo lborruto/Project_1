@@ -284,45 +284,52 @@ int maxPouls(FILE* csv)
 
     maxTaille = separationTempsEtPouls(csv);
 
-    nbrLines = numLine(csv, 0);
+    rewind(csv);
 
-    triBoum(maxTaille, 0);
+    nbrLines = numLine(csv, 1);
 
-    printf("Le maximum de pouls est %i\n", pouls[nbrLines-1].boum);
+    triBoum(maxTaille, 1);
+
+    printf("Le maximum de pouls est %i\n", pouls[TAILLE-1].boum);
 
     return 0;
 }
 
 int minPouls(FILE* csv)
 {
-    int maxTaille;
+    int maxTaille, nbrLines;
 
     maxTaille =separationTempsEtPouls(csv);
 
+    rewind(csv);
+
+    nbrLines = numLine(csv, 1);
+
     triBoum(maxTaille, 0);
 
-    printf("Le minimum de pouls est %i\n", pouls[0].boum);
+    printf("Le minimum de pouls est %i\n", pouls[TAILLE - nbrLines].boum);
 
     return 0;
 }
 
 int moyennePouls(FILE* csv)
 {
-	int moyenne;
+	double moyenne;
 	int i;
 	int maxTaille = separationTempsEtPouls(csv);
+	rewind(csv);
 	int nbrLines = numLine(csv, 0);
 
-	moyenne = pouls[0].boum;
+	moyenne = 0;
 
-	for (i = 1; i<nbrLines - 1; i++)
+	for (i = 0; i<TAILLE - 1; i++)
 	{
-		moyenne = pouls[i].boum;
+		moyenne += (double) pouls[i].boum;
 	}
 
-	moyenne = moyenne / i;
+	moyenne /= nbrLines;
 
-	printf("La moyenne du pouls est de %d", moyenne);
+	printf("La moyenne du pouls est de %f", moyenne);
 
 	return 0;
 }
